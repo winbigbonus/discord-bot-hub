@@ -1,10 +1,5 @@
-# run.ps1
+﻿cd "C:\Users\Admin\Documents\GitHub\discord-bot-hub"
 
-# Define the Python executable and script paths
-$pythonExecutable = "/discord-bot-hub/.venv/bin/python"
-$debugpyPath = "/codespace/.vscode-remote/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy/adapter/../../debugpy/launcher"
-$port = 36293
-$scriptPath = "./main.py"
+"C:\Users\Admin\Documents\GitHub\discord-bot-hub\.venv\Scripts\Activate.ps1"
 
-# Run the Python command
-& $pythonExecutable $debugpyPath $port -- $scriptPath
+& "C:\Users\Admin\Documents\GitHub\discord-bot-hub\.venv\Scripts\python.exe" "C:\Users\Admin\Documents\GitHub\discord-bot-hub\main.py" 
