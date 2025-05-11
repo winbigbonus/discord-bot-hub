@@ -2,6 +2,7 @@ import os
 import asyncio
 import logging
 from bot import setup_bot
+from flask import Flask
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -17,6 +18,12 @@ TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 if not TOKEN:
     logging.error("No Discord bot token found. Set the DISCORD_BOT_TOKEN environment variable.")
     exit(1)
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, Flask!"
 
 async def main():
     """Main entry point for the bot"""
